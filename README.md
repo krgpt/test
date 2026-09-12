@@ -53,7 +53,7 @@ python -m http.server 5500
 
 ### 설정 방법 — 한 줄만 바꾸면 됩니다
 
-1. `C:\Users\Nathan\Desktop\공매\공매.mp4` 를 YouTube에 업로드합니다.
+1. 소개 영상(`공매.mp4`)을 YouTube에 업로드합니다.
    공개 범위는 **"일부 공개(Unlisted)"** 로 두면 검색에는 안 뜨고 웹사이트에서는 정상 재생됩니다.
 2. 영상 주소에서 ID를 복사합니다.
 
