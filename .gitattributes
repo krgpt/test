@@ -1,0 +1,20 @@
+# 줄바꿈 정규화: 저장소에는 LF, 체크아웃 시 OS 기본값
+* text=auto
+
+*.html  text eol=lf
+*.css   text eol=lf
+*.js    text eol=lf
+*.md    text eol=lf
+*.json  text eol=lf
+*.svg   text eol=lf
+
+# 바이너리 — diff/병합 시도 금지
+*.jpg  binary
+*.jpeg binary
+*.png  binary
+*.webp binary
+*.mp4  binary
+*.webm binary
+*.ico  binary
+*.woff  binary
+*.woff2 binary
