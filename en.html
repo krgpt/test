@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LY Lab | AI Solutions, Education & Consulting</title>
+
+<meta name="description" content="LY Lab provides AI solution development, education, and consulting.">
+<meta name="author" content="LY Lab">
+
+<!-- 검색엔진 색인 차단. 링크를 아는 사람만 접속합니다.
+     검색 노출을 원하시면 아래 두 줄과 robots.txt를 함께 지우세요. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+
+<meta name="theme-color" content="#ffffff" id="themeColor">
+<meta name="color-scheme" content="light dark">
+
+<!-- 테마 선택을 페인트 전에 적용해 화면 깜빡임(FOUC)을 방지합니다. -->
+<script>
+(function () {
+  var KEY = 'lylab-theme';
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  var theme = (saved === 'light' || saved === 'dark')
+    ? saved
+    : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="LY Lab | AI Solutions, Education & Consulting">
+<meta property="og:description" content="AI solution development, training, and enterprise AI & security consulting.">
+<meta property="og:image" content="assets/img/cover.jpg">
+<meta property="og:locale" content="en_US">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='15' font-weight='bold' fill='%23e9c46a' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#hero" class="brand" aria-label="LY Lab home">
+      LY <span>Lab</span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Main menu">
+      <a href="#about">About</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#challenge">Training</a>
+      <a href="#solution">Consulting</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <a href="index.html">KOR</a>
+        <a href="en.html" class="is-active" aria-current="true">ENG</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button"
+              aria-label="Toggle theme" title="Switch light / dark mode">
+        <!-- 다크 모드일 때 표시: 클릭하면 라이트로 -->
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2"/>
+          <path d="M12 2v2.4M12 19.6V22M4.22 4.22l1.7 1.7M18.08 18.08l1.7 1.7M2 12h2.4M19.6 12H22M4.22 19.78l1.7-1.7M18.08 5.92l1.7-1.7"/>
+        </svg>
+        <!-- 라이트 모드일 때 표시: 클릭하면 다크로 -->
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20.5 14.6A8.6 8.6 0 1 1 9.4 3.5a6.9 6.9 0 0 0 11.1 11.1Z"/>
+        </svg>
+      </button>
+
+      <a href="#contact" class="btn btn-sm btn-ghost header-cta">Contact</a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMobile" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <nav class="nav-mobile" id="navMobile" aria-label="Mobile menu" hidden>
+    <a href="#about">About</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#challenge">Training</a>
+    <a href="#solution">Consulting</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact" class="mobile-cta">Contact</a>
+    <div class="mobile-lang" role="group" aria-label="Language">
+      <a href="index.html">KOR</a>
+      <span aria-hidden="true">/</span>
+      <a href="en.html" class="is-active" aria-current="true">ENG</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ===================== HERO ===================== -->
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║  영상 설정 — 여기 한 곳만 수정하면 됩니다.                        ║
+  ║                                                                  ║
+  ║  YouTube에 영상을 올린 뒤, 주소창의 ID를 아래                     ║
+  ║  data-youtube-id 값에 넣으세요.                                   ║
+  ║                                                                  ║
+  ║    https://www.youtube.com/watch?v=dQw4w9WgXcQ                    ║
+  ║                                        ^^^^^^^^^^^  ← 이 부분     ║
+  ║                                                                  ║
+  ║  비워두면 영상 없이 기존 그라디언트 히어로로 표시됩니다.          ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
+<section id="hero" class="hero" data-youtube-id="">
+  <!-- 배경 영상: 무음 자동재생. 조건(모션 설정/화면폭/데이터 절약)을 통과할 때만
+       main.js가 iframe을 생성하므로, 그 전에는 플레이어를 불러오지 않습니다. -->
+  <div class="hero-video" aria-hidden="true">
+    <div class="hero-video-scale" id="heroVideoMount"></div>
+  </div>
+  <div class="hero-bg" aria-hidden="true"></div>
+
+  <div class="container hero-inner">
+    <span class="eyebrow reveal">AI Solution · Education · Consulting</span>
+    <h1 class="hero-title reveal" data-delay="1">
+      AI solutions and training,<br>
+      done <em>right</em>
+    </h1>
+    <p class="hero-lead reveal" data-delay="2">
+      LY Lab provides AI solution development, education, and consulting.<br class="br-md">
+      From LLM chatbots to autonomous agents — ready for real work.
+    </p>
+    <div class="hero-actions reveal" data-delay="3">
+      <a href="#contact" class="btn btn-primary">Talk to us</a>
+      <button type="button" class="btn btn-ghost btn-play" id="playVideo">
+        <span class="play-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.2v13.6L19 12z"/></svg>
+        </span>
+        Watch intro <span class="play-dur">5:30</span>
+      </button>
+    </div>
+
+    <dl class="hero-stats reveal" data-delay="4">
+      <div>
+        <dt>Beginner–Intermediate</dt>
+        <dd><span class="num" data-count="8">0</span>-week course</dd>
+      </div>
+      <div>
+        <dt>Advanced</dt>
+        <dd><span class="num" data-count="8">0</span>-week course</dd>
+      </div>
+      <div>
+        <dt>Small classes</dt>
+        <dd><span class="num" data-count="10">0</span> people max</dd>
+      </div>
+      <div>
+        <dt>Focus</dt>
+        <dd>Build<span class="sep">·</span>Train<span class="unit">·Consult</span></dd>
+      </div>
+    </dl>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><span></span></div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="section section-bordered">
+  <div class="container">
+    <div class="split">
+      <div class="split-aside">
+        <h2 class="eyebrow">About LY Lab</h2>
+        <p class="split-title reveal">About Us</p>
+      </div>
+
+      <div class="split-body">
+        <p class="lead reveal">
+          LY Lab provides AI solution development, education, and consulting.
+        </p>
+
+        <ul class="check-list reveal" data-delay="3">
+          <li><strong>AI solution development</strong>Enterprise AI automation, cybersecurity, apps, and websites</li>
+          <li><strong>AI training</strong>Hands-on 8-week beginner–intermediate and advanced curriculum</li>
+          <li><strong>Consulting</strong>AI adoption and security consulting for startups, SMBs, and mid-size firms</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 솔루션 개발 ===================== -->
+<section id="solutions" class="section section-bordered">
+  <div class="container">
+    <header class="section-head">
+      <h2 class="eyebrow">Solution Development</h2>
+      <p class="section-title">Solution Development</p>
+      <p class="section-desc">
+        We build AI and software solutions ready for real business environments.
+      </p>
+    </header>
+
+    <div class="grid-3">
+      <article class="service-card reveal">
+        <div class="service-num">01</div>
+        <h3>Enterprise AI automation</h3>
+        <p>AI automation systems that cut repetitive work and boost efficiency.</p>
+      </article>
+      <article class="service-card reveal" data-delay="1">
+        <div class="service-num">02</div>
+        <h3>Cybersecurity solutions</h3>
+        <p>Security solutions that protect sensitive data at risk of leaking through enterprise AI LLM use, with AI monitoring for complex security operations and follow-up response.</p>
+      </article>
+      <article class="service-card reveal" data-delay="2">
+        <div class="service-num">03</div>
+        <h3>App development</h3>
+        <p>Working mobile apps, from planning to DB and API integration.</p>
+      </article>
+    </div>
+
+    <div class="grid-3">
+      <article class="service-card reveal">
+        <div class="service-num">04</div>
+        <h3>Website development</h3>
+        <p>Responsive websites and landing pages — planned, built, and deployed.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AI 교육 ===================== -->
+<section id="challenge" class="section section-bordered section-dark">
+  <div class="container">
+    <header class="section-head">
+      <h2 class="eyebrow">AI Education</h2>
+      <p class="section-title">AI Training</p>
+      <p class="section-desc">
+        Hands-on courses in beginner–intermediate and advanced tracks.
+      </p>
+    </header>
+
+    <div class="panel reveal">
+      <h3 class="panel-title">
+        <span class="panel-kicker">Beginner / Intermediate</span>
+        Beginner–Intermediate Track (8 sessions)
+      </h3>
+      <ol class="vs-steps">
+        <li><span>Session 1: Comparing the four leading LLMs and paid-agent fundamentals</span></li>
+        <li><span>Session 2: Multimodal AI and media pipeline building</span></li>
+        <li><span>Session 3: Intro to 'vibe coding' with VS Code + Claude</span></li>
+        <li><span>Session 4: Building responsive websites from natural-language instructions</span></li>
+        <li><span>Session 5: Mobile app building and database (DB) integration</span></li>
+        <li><span>Session 6: Backend API integration and app enhancement</span></li>
+        <li><span>Session 7: Autonomous agent frameworks (Hermes, OpenClaw)</span></li>
+        <li><span>Session 8: AGI-style autonomous loops and final project presentations</span></li>
+      </ol>
+    </div>
+
+    <div class="panel reveal" data-delay="1">
+      <h3 class="panel-title">
+        <span class="panel-kicker">Advanced</span>
+        Advanced Track (8 sessions)
+      </h3>
+      <ol class="vs-steps">
+        <li><span>Session 1: From DX to AX (AI Transformation) — paradigm shift and AI strategy</span></li>
+        <li><span>Session 2: Enterprise LLM architecture: on-premises vs cloud vs hybrid</span></li>
+        <li><span>Session 3: High-performance enterprise RAG architectures in depth</span></li>
+        <li><span>Session 4: LLM fine-tuning and in-house SLM strategy</span></li>
+        <li><span>Session 5: Multi-agent systems and workflow orchestration</span></li>
+        <li><span>Session 6: Enterprise MLOps & LLMOps evaluation and monitoring</span></li>
+        <li><span>Session 7: AI Governance, Enterprise Security & Risk Management</span></li>
+        <li><span>Session 8: AX executive capstone: plan your AI transformation and present to C-level</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 기업 AI 및 보안 컨설팅 ===================== -->
+<section id="solution" class="section section-bordered">
+  <div class="container">
+    <header class="section-head">
+      <h2 class="eyebrow">Consulting</h2>
+      <p class="section-title">Enterprise AI & Security Consulting</p>
+      <p class="section-desc">
+        AI adoption and security consulting for startups, SMBs, and mid-size companies.
+      </p>
+    </header>
+
+    <div class="grid-3 solution-points">
+      <div class="point reveal">
+        <h4>AI adoption consulting</h4>
+        <p>We advise where and how to introduce AI systems for maximum business impact.</p>
+      </div>
+      <div class="point reveal" data-delay="1">
+        <h4>Security consulting</h4>
+        <p>We find critical vulnerabilities in corporate networks and fix them before they are exploited.</p>
+      </div>
+      <div class="point reveal" data-delay="2">
+        <h4>Elite team</h4>
+        <p>Delivered by operators with outstanding RED-TEAM track records, at active white-hat hacker standard.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- removed case/process/services -->
+
+<!-- ===================== FAQ ===================== -->
+<section id="faq" class="section section-bordered section-dark">
+  <div class="container container-narrow">
+    <header class="section-head">
+      <h2 class="eyebrow">FAQ</h2>
+      <p class="section-title">Frequently asked questions</p>
+    </header>
+
+    <div class="faq" id="faqList">
+      <details class="faq-item reveal">
+        <summary>1. How is the AI training delivered?</summary>
+        <div class="faq-body">
+          <p>
+            Training is split into two tracks: beginner–intermediate and advanced.
+            Venues may vary by weekday session, in meeting rooms for up to 10 people.
+            Please bring your own laptop.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>2. What outcomes can students expect after the training?</summary>
+        <div class="faq-body">
+          <p><strong>Beginner–Intermediate graduates</strong></p>
+          <p>* Responsive websites: production landing pages and portfolio sites on a live URL</p>
+          <p>* Mobile apps: working apps integrated with databases and AI APIs</p>
+          <p>* 24/7 personal autonomous AI agent: a self-directed assistant that controls your PC and scrapes work data via messenger commands</p>
+          <p><strong>Advanced graduates</strong></p>
+          <p>* Enterprise AI Architecture Blueprint: an on-premises / commercial hybrid AI architecture tailored to your business</p>
+          <p>* AX ROI & Business Value Model: concrete ROI and TCO models that convince executives and boards</p>
+          <p>* AI Governance & Compliance Guide: company-specific AI security and governance guidelines covering global regulations (EU AI Act, etc.) and data-leak prevention</p>
+        </div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>3. What does the enterprise AI and security consulting cover?</summary>
+        <div class="faq-body">
+          <p>
+            We mainly consult startups, SMBs, and mid-size companies on how to adopt AI systems for maximum impact.
+            We also provide cybersecurity consulting that finds critical network vulnerabilities before they are exploited.
+            Our team members operate at active white-hat hacker standard with outstanding RED-TEAM careers.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>4. Do you also do solution development?</summary>
+        <div class="faq-body">
+          <p>
+            Development is not the largest part of our business, but consulting engagements sometimes require web or app development alongside.
+            In those cases we deliver both together.
+            We also take on development work when busy professionals have no time to build webs or apps themselves.
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="section contact">
+  <div class="container container-narrow">
+    <h2 class="eyebrow">Contact Us</h2>
+    <p class="section-title contact-title">Talk to LY Lab</p>
+    <p class="contact-desc">
+      Start your AI solutions, training, and consulting journey with LY Lab.<br class="br-md">
+      We will walk you through the details in an offline meeting.
+    </p>
+
+    <div class="contact-card reveal">
+      <span class="contact-kicker">Direct Email</span>
+      <a href="mailto:contact@lylab.ai" class="contact-mail">contact@lylab.ai</a>
+      <p class="contact-hint">Please include your area of interest (AI training / solution development / consulting) so we can respond faster.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand">LY <span>Lab</span></span>
+        <p>AI Solution · Education · Consulting</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer menu">
+        <a href="#about">About</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#solution">Consulting</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <p class="disclaimer">
+      This page introduces LY Lab's AI solution development, training, and consulting.
+      Schedules and venues may vary by course; details are provided in consultation.
+    </p>
+
+    <p class="copyright">&copy; <span id="year">2026</span> LY Lab. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ===================== VIDEO MODAL ===================== -->
+<div class="video-modal" id="videoModal" hidden>
+  <div class="video-modal-backdrop" data-close-modal></div>
+  <div class="video-modal-inner" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
+    <div class="video-modal-head">
+      <h2 class="video-modal-title" id="videoModalTitle">LY Lab intro video</h2>
+      <button type="button" class="video-modal-close" data-close-modal aria-label="Close video">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+             stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </button>
+    </div>
+    <!-- 모달을 열 때 main.js가 iframe을 여기에 삽입합니다 (미리 불러오지 않음). -->
+    <div class="video-frame" id="modalVideoMount"></div>
+    <p class="video-modal-note">About 5 min 30 sec · data charges may apply.</p>
+  </div>
+</div>
+
+<button class="to-top" id="toTop" aria-label="Back to top" hidden>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+    <path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
