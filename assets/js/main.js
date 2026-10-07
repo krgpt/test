@@ -1,5 +1,5 @@
 /* =========================================================
-   KRWA Team — main.js
+   LY Lab — main.js
    Header state / mobile nav / scroll reveal / counters /
    active nav / accordion / to-top
    ========================================================= */
@@ -11,7 +11,7 @@
   /* ---------- 0. Theme (dark / light) ----------
      초기 테마는 <head> 인라인 스크립트가 이미 적용한 상태입니다.
      여기서는 토글, 저장, 시스템 설정 변경 추적만 담당합니다. */
-  var THEME_KEY = 'krwa-theme';
+  var THEME_KEY = 'LY Lab';
   var root = document.documentElement;
   var themeToggle = document.getElementById('themeToggle');
   var themeColorMeta = document.getElementById('themeColor');
